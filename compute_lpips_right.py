@@ -6,12 +6,12 @@ import lpips
 from torchvision import transforms
 from itertools import combinations
 
-name = 'gurae_under6'
+name = 'janggi_under6'
 
 # === Paths ===
-IMAGE_DIR = f"../../dataset/{name}/{name}_merged" # 파노라마 뷰가 저장된 이미지 폴더
-PAIRWISE_CSV = f"../../dataset/{name}/{name}_lpips_results.csv" # 생성되는 파일 1. : 두 이미지 페어 점수가 저장
-AVERAGE_CSV = f"../../dataset/{name}/{name}_lpips_average_scores.csv" # 생성되는 파일 2. : 하나의 이미지에 대한 나머지 이미지 LPIPS average 점수 저장 
+IMAGE_DIR = f"../../dataset/{name}/{name}_f" # 파노라마 뷰가 저장된 이미지 폴더
+PAIRWISE_CSV = f"../../dataset/{name}/{name}_front_lpips_results.csv" # 생성되는 파일 1. : 두 이미지 페어 점수가 저장
+AVERAGE_CSV = f"../../dataset/{name}/{name}_front_lpips_average_scores.csv" # 생성되는 파일 2. : 하나의 이미지에 대한 나머지 이미지 LPIPS average 점수 저장 
 
 # === LPIPS model ===
 lpips_model = lpips.LPIPS(net='vgg') # 네트워크가 vgg
